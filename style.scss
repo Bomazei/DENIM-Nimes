@@ -1,0 +1,430 @@
+@import './normalize.scss';
+
+@mixin font-worksans {
+    font-family: 'Work Sans', sans-serif;
+}
+@mixin font-anton {
+    font-family: 'Anton', sans-serif;
+}
+
+
+//=== Vars ===
+
+$color-main: #151C22;
+$color-gray: #727A82;
+$color-light: #F1F2F4;
+
+//=== / Vars ===
+
+
+//=== Common ===
+html {
+    scroll-behavior: smooth;
+}
+* {
+    
+    box-sizing: border-box;
+    @include font-worksans;
+    color: $color-main;
+    padding: 0;
+    margin: 0;
+}
+.logo{
+    font-size: 24px;
+    font-weight: 800;
+    
+    
+}
+.link {
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+    font-weight: 500;
+}
+.button {
+    background-color: $color-main;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 27px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 200px;
+    text-decoration: none;
+}
+.graytitle{
+    color: $color-gray;
+    font-size: 18px;
+}
+.boldtitle {
+    font-size: 32px;
+}
+.section {
+    padding: 0 100px 130px 100px;
+}
+.section-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 70px;
+    &__link {
+        font-size: 18px;
+        text-decoration: none;
+        font-weight: 500;
+        border-bottom: 2px solid $color-main;
+    }
+}
+
+.section-gallery {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &-item{
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        &__name{
+            font-size: 18px;
+            font-weight: 500;
+            padding-top: 25px;
+        }
+        &__price{
+            font-size: 16px;
+            font-weight: bold;
+            padding-top: 15px;
+        }
+    }
+}
+//=== / Common ===
+
+
+//=== header ===
+
+.section-header {
+    padding-bottom: 135px;
+    &-logo {
+        width: 100%;
+        height: 67px;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &-wrapper {
+        background-color: $color-light;
+        
+        
+        
+    }
+    &-content {
+        padding: 50px 100px;
+        display: flex;
+        justify-content: space-between;
+        &-leftbar {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .menu {
+                list-style: none;
+                
+                li a {
+                    padding-bottom: 35px;
+                    font-weight: 500;
+                }
+            }
+            .arrowdown {
+                cursor: pointer;
+            }
+        }
+        &-clickbait {
+            
+            &__subtitle {
+                margin-top: 152px;
+                
+                
+            }
+            &__title {
+                line-height: 1;
+                margin-left: -4px;
+                @include font-anton;
+                font-size: 128px;
+                
+            }
+            &__button button{
+                margin-top: 25px;
+                
+            }
+        }
+        &-image {
+            z-index: 1;
+            position: relative;
+            
+            &::before {
+                content: '';
+                position: absolute;
+                z-index: -1;
+                top: -50px;
+                left: -50px;
+                width: 232px;
+                height: 176px;
+                background: url('./img/lines1-2.png');
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                z-index: -1;
+                bottom: -50px;
+                right: -50px;
+                width: 232px;
+                height: 176px;
+                background: url('./img/lines1-1.png');
+            }
+        }
+        &-rightbar {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            
+            &__icons {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+            }
+            &__icon + &__icon{
+                margin-top: 35px;
+            }
+            &__icon img{
+                cursor: pointer;
+            }
+            
+            &__social {
+                display: flex;
+                flex-direction: column;
+                a{
+                    font-size: 14px;
+                    margin-top: 35px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    
+}
+
+//=== / header ===
+
+//=== best ===
+
+
+
+//=== / best ===
+
+
+//=== fall2019 ===
+
+.section-fall2019{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+    .fall2019-link{
+        background: #fff;
+        width: 400px;
+        height: 308px;
+        display: flex;
+        flex-direction: column;
+        padding: 70px 112px 70px 70px;
+        position: relative;
+        .boldtitle{
+            padding: 20px 0 50px 0;
+        }
+        &::before{
+            content: '';
+            
+            position: absolute;
+            z-index: -1;
+            top: -30px;
+            right: -70px;
+            width: 470px;
+            height: 370px;
+            background: url('./img/lines-between.png');
+        }
+        
+    }
+}
+
+//=== /fall2019 ===
+
+
+
+
+//=== by category ===
+
+
+//=== /be category ===
+
+
+
+
+
+//=== footer ===
+
+.section-footer{
+    background-color: $color-main;
+    height: 230px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &-logo{
+        color: #fff;
+    }
+    &-menu{
+        padding: 35px 0;
+        display: flex;
+        list-style-type: none;
+        li{
+            padding-left: 35px;
+        }
+        a{
+            color: #fff;
+            text-decoration: none;
+        }
+        
+    }
+    &-links{
+        
+        a + a{
+            padding-left: 30px;
+        }
+    }
+}
+
+//=== /footer ===
+
+@media screen and (max-width: 768px){
+    .boldtitle{
+        font-size: 28px;
+    }
+   .section{
+       padding: 0 45px 100px 45px;
+   }
+   .section-gallery-item{
+       padding-bottom: 50px;
+       img{
+           width: 324px;
+           height: 349px;
+       }
+   }
+   .section-fall2019{
+       .fall2019-image{
+           width: 354px;
+           height: 287px;
+       }
+       .fall2019-link{
+           width: 304px;
+           height: 247px;
+           padding: 50px;
+           .graytitle{
+               width: 218px;
+           }
+           .boldtitle{
+               padding: 15px 0 40px 0;
+           }
+           &::before{
+                content: ''; 
+                position: absolute;
+                z-index: -1;
+                top: -20px;
+                right: -20px;
+                width: 324px;
+                height: 287px;
+                background: url('./img/lines-between.png');   
+           }
+       }
+   }
+
+   .section-header{
+       &-content{
+           
+           position: relative;
+           padding: 45px;
+            &-leftbar{
+                .menu{
+                    position: absolute;
+                    display: flex;
+                    li{
+                        padding-right: 35px;
+                    }
+                }
+                .arrowdown{
+                    position: absolute;
+                    bottom: 45px;
+                }
+            }
+            &-image{
+                img{
+                    margin: 50px 0 80px 0;
+                    width: 264px;
+                    height: 319px;
+                }
+                &::before {
+                    content: '';
+                    position: absolute;
+                    z-index: -1;
+                    top: 25px;
+                    left: -30px;
+                    width: 141px;
+                    height: 104px;
+                    background: url('./img/lines1-2.png');
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    z-index: -1;
+                    bottom: 60px;
+                    right: -30px;
+                    width: 141px;
+                    height: 104px;
+                    background: url('./img/lines1-1.png');
+                }
+            }
+            &-clickbait{
+                &__subtitle{
+                    margin-top: 105px;
+                }
+               &__title{
+                   font-size: 98px;
+               }
+           }
+           &-rightbar{
+               &__icons{
+                   display: flex;
+                   flex-direction: row;
+                   align-items: center;
+                   position: absolute;
+                   right: 45px;
+               }
+               &__icon + &__icon{
+                   
+                   margin: 0;
+                   padding-left: 35px;
+               }
+               &__social{
+                   flex-direction: row;
+                   position: absolute;
+                   bottom: 45px;
+                   right: 45px;
+                   .link + .link {
+                       padding-left: 35px;
+                   }
+               }
+           }
+       }
+   }
+}
