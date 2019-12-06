@@ -695,7 +695,7 @@ html {
     font-size: 28px;
   }
   .section {
-    padding: 0 45px 100px 45px;
+    padding: 0 45px 50px 45px;
   }
   .section-gallery-item {
     padding-bottom: 50px;
@@ -704,9 +704,14 @@ html {
     width: 324px;
     height: 349px;
   }
+  .section-fall2019 {
+    padding-bottom: 100px;
+  }
   .section-fall2019 .fall2019-image {
     width: 354px;
     height: 287px;
+    background: url("./img/between.png");
+    background-size: cover;
   }
   .section-fall2019 .fall2019-link {
     width: 304px;
@@ -1037,6 +1042,12 @@ html {
   }
   .category {
     padding-left: 45px;
+  }
+  .section-gallery-item {
+    padding-bottom: 66px;
+  }
+  .catalog {
+    padding-bottom: 34px;
   }
 }
 /*# sourceMappingURL=catalog.css.map */
