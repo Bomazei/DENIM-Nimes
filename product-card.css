@@ -1636,6 +1636,7 @@ html {
 }
 
 .section-header-logo a {
+  padding-right: 5%;
   text-decoration: none;
 }
 
@@ -1646,7 +1647,7 @@ html {
   list-style: none;
 }
 
-.catalog-menu li {
+.catalog-menu li:not(:last-child) {
   padding-right: 35px;
 }
 
@@ -1815,7 +1816,7 @@ html {
           transform: rotate(180deg);
 }
 
-.section-gallery {
+.catalog {
   padding-top: 90px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1824,7 +1825,7 @@ html {
       flex-wrap: wrap;
 }
 
-.section-gallery .section-gallery-item {
+.section-gallery-item {
   padding-bottom: 130px;
 }
 

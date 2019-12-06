@@ -10,6 +10,7 @@
    justify-content: space-between;
    padding: 0 98px;
    a{
+        padding-right: 5%;
         text-decoration: none;
    }
 }
@@ -17,8 +18,11 @@
     display: flex;
     list-style: none;
     li {
-       padding-right: 35px; 
+       &:not(:last-child){
+           padding-right: 35px; 
+       }
     }
+
 }
 .header-icons{
     display: flex;
@@ -146,17 +150,17 @@
         }
     }
 }
-.section-gallery{
+.catalog{
     padding-top: 90px;
     
     display: flex;
     flex-wrap: wrap;
     
-    .section-gallery-item{
-    padding-bottom: 130px;  
-    }
+   
 }
-
+.section-gallery-item{
+    padding-bottom: 130px;  
+}
 @media screen and (max-width: 768px) {
     .section-header-logo {
         padding: 45px;
